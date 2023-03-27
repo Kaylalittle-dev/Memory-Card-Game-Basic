@@ -1,51 +1,51 @@
 const cardArray = [
     {
-        name: 'fries',
-        img: 'images/fries.png',
+        name: 'shrek',
+        img: 'images/shrek.jpg',
     },
     {
-        name: 'cheeseburger',
-        img: 'images/cheeseburger.png',
+        name: 'florida',
+        img: 'images/florida.png',
     },
     {
-        name: 'hotdog',
-        img: 'images/hotdog.png',
+        name: 'gallo pinto',
+        img: 'images/gallopinto.jpg',
     },
     {
-        name: 'ice-cream',
-        img: 'images/ice-cream.png',
+        name: 'cat',
+        img: 'images/cat.png',
     },
     {
-        name: 'milkshake',
-        img: 'images/milkshake.png',
+        name: 'travel',
+        img: 'images/travel.png',
     },
     {
-        name: 'pizza',
-        img: 'images/pizza.png',
+        name: 'music',
+        img: 'images/music.jpg',
     },
     {
-        name: 'fries',
-        img: 'images/fries.png',
+        name: 'shrek',
+        img: 'images/shrek.jpg',
     },
     {
-        name: 'cheeseburger',
-        img: 'images/cheeseburger.png',
+        name: 'florida',
+        img: 'images/florida.png',
     },
     {
-        name: 'hotdog',
-        img: 'images/hotdog.png',
+        name: 'gallo pinto',
+        img: 'images/gallopinto.jpg',
     },
     {
-        name: 'ice-cream',
-        img: 'images/ice-cream.png',
+        name: 'cat',
+        img: 'images/cat.png',
     },
     {
-        name: 'milkshake',
-        img: 'images/milkshake.png',
+        name: 'travel',
+        img: 'images/travel.png',
     },
     {
-        name: 'pizza',
-        img: 'images/pizza.png',
+        name: 'music',
+        img: 'images/music.jpg',
     }
 ]
 
@@ -57,13 +57,26 @@ let cardsChosen = []
 let cardsChosenIds = []
 const cardsWon = []
 
+// function createBoard(){
+//     for(let i = 0; i < cardArray.length; i++){
+//         const card = document.createElement('img')
+//         card.setAttribute('src', 'images/blank.png')
+//         card.setAttribute('data-id', i)
+//         card.addEventListener('click', flipCard)
+//         gridDisplay.appendChild(card)
+//     }
+// }
+
 function createBoard(){
     for(let i = 0; i < cardArray.length; i++){
         const card = document.createElement('img')
         card.setAttribute('src', 'images/blank.png')
         card.setAttribute('data-id', i)
+        card.classList.add('card-img'); // add the class here
         card.addEventListener('click', flipCard)
         gridDisplay.appendChild(card)
+        card.style.width = "250px";
+        card.style.height = "250px";
     }
 }
 
